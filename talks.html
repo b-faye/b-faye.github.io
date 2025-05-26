@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Teaching - Bilal FAYE</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="teaching.html">Teaching</a></li>
+            <li><a class="dropdown-item" href="publications.html">Publications</a></li>
+            <li><a class="dropdown-item" href="research.html">Research</a></li>
+            <li><a class="dropdown-item" href="distinctions.html">Distinctions</a></li>
+            <li><a class="dropdown-item" href="formation.html">Formation</a></li>
+            <li><a class="dropdown-item" href="encadrement.html">Supervision</a></li>
+            <li><a class="dropdown-item" href="talks.html">Talks</a></li>
+            <li><a class="dropdown-item" href="others.html">Others</a></li>
+            <li><a class="dropdown-item" href="contact.html">Contacts</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="teaching.html">Teaching</a></li>
+          <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
+          <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
+          <li class="nav-item"><a class="nav-link" href="distinctions.html">Distinctions</a></li>
+          <li class="nav-item"><a class="nav-link" href="formation.html">Formation</a></li>
+          <li class="nav-item"><a class="nav-link" href="encadrement.html">Supervision</a></li>
+          <li class="nav-item"><a class="nav-link" href="talks.html">Talks</a></li>
+          <li class="nav-item"><a class="nav-link" href="others.html">Others</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contacts</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero-section d-flex align-items-center">
+    <div class="container text-center text-white">
+      <img src="images/image.jpg" alt="Bilal FAYE" class="profile-img mb-3">
+      <h1 class="display-4 fw-bold">Bilal FAYE</h1>
+      <p class="lead">
+        PhD in Artificial Intelligence | Researcher | Educator | AI Vision & NLP Specialist.
+      </p>
+      <div class="contact-info">
+        <p>📍 Saint Denis, France | ✉️ biljolefa@gmail.com | 
+          <a href="https://www.linkedin.com/in/bilal-faye" class="text-white text-decoration-underline">LinkedIn</a></p>
+      </div>
+    </div>
+  </header><section class="container py-5">
+  <h2 class="mb-4 text-center fw-bold">Talks & Presentations</h2>
+  <div class="accordion" id="talksAccordion">
+
+    <!-- GREYC Seminar – June 2025 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingGREYC">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGREYC">
+          Seminar – GREYC CNRS Caen | Toward Frugal Multimodal Models | June 2025
+        </button>
+      </h2>
+      <div id="collapseGREYC" class="accordion-collapse collapse show" data-bs-parent="#talksAccordion">
+        <div class="accordion-body">
+          <p><strong>Institution:</strong> GREYC Lab, UMR CNRS 6072 – Caen</p>
+          <p><strong>Title:</strong> <em>Toward Frugal Multimodal Models: Leveraging Prior Knowledge for Efficient Learning</em></p>
+          <p><strong>Abstract:</strong> Incorporating prior knowledge can significantly reduce the need for large-scale training data and heavy parameterization, while preserving high performance. Within a multimodal framework, this principle enables the design of lightweight and efficient models. Two key examples illustrate this idea: OneEncoder, a frugal multimodal encoder based on contrastive learning that aligns diverse modalities (text, image, audio, video) without relying on massive paired datasets; and LightMDETR, a streamlined adaptation of the MDETR model for open-vocabulary object detection, which enables efficient generalization to unseen categories with reduced computational demands.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Paris GenAI Autumn School – October 2024 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingGenAI">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGenAI">
+          Paris GenAI Autumn School | Optimizing AI Models: Offline Alignment & RL | October 2024
+        </button>
+      </h2>
+      <div id="collapseGenAI" class="accordion-collapse collapse" data-bs-parent="#talksAccordion">
+        <div class="accordion-body">
+          <p><strong>Event:</strong> Paris Generative AI Autumn School</p>
+          <p><strong>Collaboration:</strong> Yunhao Tang (Meta FAIR)</p>
+          <p><strong>Focus:</strong> Offline alignment, reinforcement learning for AI model optimization without online interaction, supervised fine-tuning (SFT), preference learning, and safe alignment.</p>
+          <p><a href="https://www.genai-school.universite-paris-saclay.fr" target="_blank">Event Website</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- IHU WP6 – May 2024 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingIHU">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIHU">
+          IHU WP6 – Sorbonne Paris Nord | LLMs & Sepsis | May 2024
+        </button>
+      </h2>
+      <div id="collapseIHU" class="accordion-collapse collapse" data-bs-parent="#talksAccordion">
+        <div class="accordion-body">
+          <p><strong>Topic:</strong> Addressing hallucinations and domain bias in LLMs for medical queries, using sepsis as a case study. Discussed methods to improve reliability and robustness in healthcare applications.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Data Science Seminar – February 2024 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingAttention">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAttention">
+          Seminar – Sorbonne Paris Nord | Attention in Multimodal & Graphs | Feb 2024
+        </button>
+      </h2>
+      <div id="collapseAttention" class="accordion-collapse collapse" data-bs-parent="#talksAccordion">
+        <div class="accordion-body">
+          <p><strong>Topic:</strong> Role of attention mechanisms in multimodal fusion and graph processing. Covered their theoretical basis and practical applications in integrating complex data.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- M2 DataScale – June 2023 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingHF">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHF">
+          Lecture – Paris-Saclay | Training LLMs with Hugging Face | June 2023
+        </button>
+      </h2>
+      <div id="collapseHF" class="accordion-collapse collapse" data-bs-parent="#talksAccordion">
+        <div class="accordion-body">
+          <p><strong>Audience:</strong> Master 2 DataScale students</p>
+          <p><strong>Content:</strong> Practical session on LLM training and fine-tuning using Hugging Face Transformers. Focused on optimization strategies and deployment best practices.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- LabCom IRISER – May 2023 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingIRISER">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIRISER">
+          Seminar – Sorbonne Paris Nord | Neural Network Normalization | May 2023
+        </button>
+      </h2>
+      <div id="collapseIRISER" class="accordion-collapse collapse" data-bs-parent="#talksAccordion">
+        <div class="accordion-body">
+          <p><strong>Topic:</strong> Explored normalization strategies in deep learning, focusing on methods that use prior knowledge for better adaptability and efficiency.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bakhbade Academy – January 2023 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingAIIntro">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAIIntro">
+          Public Talk – Bakhbade Academy, Senegal | Intro to AI | January 2023
+        </button>
+      </h2>
+      <div id="collapseAIIntro" class="accordion-collapse collapse" data-bs-parent="#talksAccordion">
+        <div class="accordion-body">
+          <p><strong>Audience:</strong> General public and students</p>
+          <p><strong>Content:</strong> Fundamentals of Artificial Intelligence, applications across domains, and a look at emerging trends in the field.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+      <div class="text-center mt-5">
+      <a href="index.html" class="btn btn-primary">⬅️ Back to Home</a>
+    </div>
+</section>
+  <!-- Footer -->
+  <footer class="footer text-white text-center py-3 mt-auto" style="background-color: #212529;">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Bilal FAYE. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
+

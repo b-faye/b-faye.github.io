@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Teaching - Bilal FAYE</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="teaching.html">Teaching</a></li>
+            <li><a class="dropdown-item" href="publications.html">Publications</a></li>
+            <li><a class="dropdown-item" href="research.html">Research</a></li>
+            <li><a class="dropdown-item" href="distinctions.html">Distinctions</a></li>
+            <li><a class="dropdown-item" href="formation.html">Formation</a></li>
+            <li><a class="dropdown-item" href="encadrement.html">Supervision</a></li>
+            <li><a class="dropdown-item" href="talks.html">Talks</a></li>
+            <li><a class="dropdown-item" href="others.html">Others</a></li>
+            <li><a class="dropdown-item" href="contact.html">Contacts</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="teaching.html">Teaching</a></li>
+          <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
+          <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
+          <li class="nav-item"><a class="nav-link" href="distinctions.html">Distinctions</a></li>
+          <li class="nav-item"><a class="nav-link" href="formation.html">Formation</a></li>
+          <li class="nav-item"><a class="nav-link" href="encadrement.html">Supervision</a></li>
+          <li class="nav-item"><a class="nav-link" href="talks.html">Talks</a></li>
+          <li class="nav-item"><a class="nav-link" href="others.html">Others</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contacts</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero-section d-flex align-items-center">
+    <div class="container text-center text-white">
+      <img src="images/image.jpg" alt="Bilal FAYE" class="profile-img mb-3">
+      <h1 class="display-4 fw-bold">Bilal FAYE</h1>
+      <p class="lead">
+        PhD in Artificial Intelligence | Researcher | Educator | AI Vision & NLP Specialist.
+      </p>
+      <div class="contact-info">
+        <p>📍 Saint Denis, France | ✉️ biljolefa@gmail.com | 
+          <a href="https://www.linkedin.com/in/bilal-faye" class="text-white text-decoration-underline">LinkedIn</a></p>
+      </div>
+    </div>
+  </header>
+<section class="container py-5">
+  <h2 class="mb-4 text-center fw-bold">Research Directions</h2>
+  <div class="accordion" id="researchAccordion">
+
+    <!-- Diffusion Models -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingDiffusion">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDiffusion">
+          Diffusion Models
+        </button>
+      </h2>
+      <div id="collapseDiffusion" class="accordion-collapse collapse show" data-bs-parent="#researchAccordion">
+        <div class="accordion-body">
+          <p>Diffusion models are a class of generative models that iteratively denoise data from random noise to generate samples. They have demonstrated remarkable performance in image, audio, and even text generation.</p>
+          <p>Popular models include DDPM, Stable Diffusion, and Imagen. Despite their success, they are computationally expensive and require long inference times.</p>
+          <p><strong>Our Contribution:</strong> We propose a lightweight conditioning-aware sampling strategy that reduces inference steps by learning adaptive guidance schedules. This technique bridges control and efficiency, enabling faster and controllable generation with fewer resources—opening opportunities for real-time applications.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reinforcement Learning for LLMs -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingRL">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRL">
+          Reinforcement Learning for LLMs
+        </button>
+      </h2>
+      <div id="collapseRL" class="accordion-collapse collapse" data-bs-parent="#researchAccordion">
+        <div class="accordion-body">
+          <p>Reinforcement learning is widely used to fine-tune LLMs to better align with human preferences. RLHF (Reinforcement Learning with Human Feedback) combines supervised fine-tuning, preference models, and Proximal Policy Optimization (PPO).</p>
+          <p>However, RLHF is limited by instability and reliance on carefully crafted preference datasets. DPO (Direct Preference Optimization) simplifies the process using prompt-preferred-rejected triplets but depends heavily on quality data, which is hard to collect.</p>
+          <p>DRO (Direct Reward Optimization) goes further by using (prompt, answer, reward) tuples to jointly learn the policy and value functions, which remains a challenging optimization problem.</p>
+          <p><strong>Our Contribution:</strong> We develop a hybrid DRO framework that decouples policy and value learning using modular actor-critic heads with memory-based priors. This structure reduces learning instability and enhances scalability across tasks with noisy reward functions.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- OmniLLM -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOmniLLM">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOmniLLM">
+          OmniLLM – Extending Any LLM to Multimodal Capabilities
+        </button>
+      </h2>
+      <div id="collapseOmniLLM" class="accordion-collapse collapse" data-bs-parent="#researchAccordion">
+        <div class="accordion-body">
+          <p><strong>Challenge:</strong> Most multimodal LLMs are expensive and hard to scale.</p>
+          <p><strong>Objective:</strong> OmniLLM provides an efficient framework to extend any LLM to multimodal tasks with minimal cost.</p>
+          <p><a href="https://huggingface.co/bilalfaye/omnillm" target="_blank">View project on Hugging Face</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- LLM for African Languages -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingAfricanLLM">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAfricanLLM">
+          LLM for African Languages – Resource-Low Multilingual Models
+        </button>
+      </h2>
+      <div id="collapseAfricanLLM" class="accordion-collapse collapse" data-bs-parent="#researchAccordion">
+        <div class="accordion-body">
+          <p><strong>Challenge:</strong> Many African languages are low-resource and underrepresented in NLP.</p>
+          <p><strong>Objective:</strong> Build efficient multilingual LLMs for African languages using transfer learning and low-resource techniques.</p>
+          <p><a href="https://huggingface.co/bilalfaye" target="_blank">View models on Hugging Face</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- LightMDETR -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingLightMDETR">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLightMDETR">
+          LightMDETR – Open-Vocabulary Object Detection
+        </button>
+      </h2>
+      <div id="collapseLightMDETR" class="accordion-collapse collapse" data-bs-parent="#researchAccordion">
+        <div class="accordion-body">
+          <p><strong>Challenge:</strong> Open-vocabulary detection is expensive and data-hungry.</p>
+          <p><strong>Solution:</strong> LightMDETR is a modular framework reducing training cost while maintaining performance. Variants like LightMDETR-PLUS push the efficiency frontier.</p>
+          <p><a href="https://github.com/b-faye/lightmdetr" target="_blank">View on GitHub</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- OneEncoder -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOneEncoder">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneEncoder">
+          OneEncoder – Cross-Modal Alignment for Multimodal Learning
+        </button>
+      </h2>
+      <div id="collapseOneEncoder" class="accordion-collapse collapse" data-bs-parent="#researchAccordion">
+        <div class="accordion-body">
+          <p><strong>Challenge:</strong> High training cost and reliance on large paired datasets.</p>
+          <p><strong>Solution:</strong> OneEncoder aligns multiple modalities with a unified encoder, supporting zero-shot and domain-specific tasks.</p>
+          <p><a href="https://github.com/b-faye/OneEncoder" target="_blank">View on GitHub</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Context Normalization -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingContextNorm">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseContextNorm">
+          Context Normalization – Efficient Deep Learning Optimization
+        </button>
+      </h2>
+      <div id="collapseContextNorm" class="accordion-collapse collapse" data-bs-parent="#researchAccordion">
+        <div class="accordion-body">
+          <p><strong>Challenge:</strong> Traditional normalization techniques assume simple distributions or use expensive clustering.</p>
+          <p><strong>Solution:</strong> Context Normalization introduces supervised and unsupervised normalization using prior knowledge without EM. Improves efficiency and generalization.</p>
+          <p><a href="https://github.com/b-faye/prior-knowledge-norm" target="_blank">View on GitHub</a></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+      <div class="text-center mt-5">
+      <a href="index.html" class="btn btn-primary">⬅️ Back to Home</a>
+    </div>
+</section>
+  <!-- Footer -->
+  <footer class="footer text-white text-center py-3 mt-auto" style="background-color: #212529;">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Bilal FAYE. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
+
