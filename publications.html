@@ -71,21 +71,6 @@
     <!-- International Conferences -->
     <h4 class="mt-4">International Conferences</h4>
 
-      <div class="accordion-item">
-      <h2 class="accordion-header" id="headingOneEncoder">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneEncoder">
-          OneEncoder: Progressive Modality Alignment – NCA journal 2025
-        </button>
-      </h2>
-      <div id="collapseOneEncoder" class="accordion-collapse collapse" data-bs-parent="#publicationsAccordion">
-        <div class="accordion-body">
-          <strong>Authors:</strong> Bilal Faye, Hanane Azzag, Mustapha Lebbah, Djamel Bouchaffra<br>
-          <strong>Abstract:</strong> Novel framework for cross-modal progressive alignment using lightweight encoders.<br>
-          <a href="https://arxiv.org/abs/2409.11059" target="_blank">Read the paper</a>
-        </div>
-      </div>
-    </div>
-
     <div class="accordion-item">
       <h2 class="accordion-header" id="headingICICT">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseICICT">
@@ -95,7 +80,29 @@
       <div id="collapseICICT" class="accordion-collapse collapse" data-bs-parent="#publicationsAccordion">
         <div class="accordion-body">
           <strong>Authors:</strong> Bilal Faye, Mustapha Lebbah, Hanane Azzag<br>
-          <strong>Abstract:</strong> A supervised normalization approach to enhance deep learning model performance.<br>
+          <strong>Abstract:</strong> Batch Normalization (BN), a widely-used
+                                    technique in neural networks, enhances generalization
+                                    and expedites training by normalizing each mini-batch to
+                                    the same mean and variance. However, its effectiveness
+                                    diminishes when confronted with diverse data distributions.
+                                    To address this challenge, we propose Supervised Batch
+                                    Normalization (SBN), a pioneering approach. We expand
+                                    normalization beyond traditional single mean and variance
+                                    parameters, enabling the identification of data modes prior
+                                    to training. This ensures effective normalization for samples
+                                    sharing common features. We define contexts as modes,
+                                    categorizing data with similar characteristics. These contexts
+                                    are explicitly defined, such as domains in domain adaptation
+                                    or modalities in multimodal systems, or implicitly defined
+                                    through clustering algorithms based on data similarity. We
+                                    illustrate the superiority of our approach over BN and other
+                                    commonly employed normalization techniques through various
+                                    experiments on both single and multi-task datasets. Integrating
+                                    SBN with Vision Transformer results in a remarkable 15.13%
+                                    accuracy enhancement on CIFAR-100. Additionally, in domain
+                                    adaptation scenarios, employing AdaMatch demonstrates an
+                                    impressive 22.25% accuracy improvement on MNIST and
+                                    SVHN compared to BN.<br>
           <a href="https://arxiv.org/abs/2405.17027" target="_blank">Read the paper</a>
         </div>
       </div>
@@ -110,7 +117,7 @@
       <div id="collapseICIP" class="accordion-collapse collapse" data-bs-parent="#publicationsAccordion">
         <div class="accordion-body">
           <strong>Authors:</strong> Bilal Faye, Hanane Azzag, Mustapha Lebbah, Djamel Bouchaffra<br>
-          <strong>Abstract:</strong> A novel normalization strategy for image processing using contextual cues.<br>
+          <strong>Abstract:</strong> Deep Neural network learning for image processing faces major challenges related to changes in distribution across layers, which disrupt model convergence and performance. Activation normalization methods, such as Batch Normalization (BN), have revolutionized this field, but they rely on the simplified assumption that data distribution can be modelled by a single Gaussian distribution. To overcome these limitations, Mixture Normalization (MN) introduced an approach based on a Gaussian Mixture Model (GMM), assuming multiple components to model the data. However, this method entails substantial computational requirements associated with the use of Expectation-Maximization algorithm to estimate parameters of each Gaussian components. To address this issue, we introduce Adaptative Context Normalization (ACN), a novel supervised approach that introduces the concept of “context”, which groups together a set of data with similar characteristics. Data belonging to the same context are normalized using the same parameters, enabling local representation based on contexts. For each context, the normalized parameters, as the model weights are learned during the backpropagation phase. ACN not only ensures speed, convergence, and superior performance compared to BN and MN but also presents a fresh perspective that underscores its particular efficacy in the field of image processing. We release our code at https://github.com/b-faye/Adaptative-Context-Normalization.<br>
           <a href="https://ieeexplore.ieee.org/document/10647964" target="_blank">Read the paper</a>
         </div>
       </div>
@@ -125,7 +132,17 @@
       <div id="collapseESANN" class="accordion-collapse collapse" data-bs-parent="#publicationsAccordion">
         <div class="accordion-body">
           <strong>Authors:</strong> Bilal Faye, Hanane Azzag, Mustapha Lebbah, Djamel Bouchaffra<br>
-          <strong>Abstract:</strong> Efficient representation learning across multiple modalities.<br>
+          <strong>Abstract:</strong> Low-cost cross-modal representation learning is crucial for
+                                    deriving semantic representations across diverse modalities such as text,
+                                    audio, images, and video. Traditional approaches typically depend on large
+                                    specialized models trained from scratch, requiring extensive datasets and
+                                    resulting in high resource and time costs. To overcome these challenges, we
+                                    introduce a novel approach named Lightweight Cross-Modal Representa-
+                                    tion Learning (LightCRL). This method uses a single neural network titled
+                                    Deep Fusion Encoder (DFE), which projects data from multiple modal-
+                                    ities into a shared latent representation space. This reduces the overall
+                                    parameter count while still delivering robust performance comparable to
+                                    more complex systems.<br>
           <a href="https://www.esann.org/sites/default/files/proceedings/2024/ES2024-96.pdf" target="_blank">Read the paper</a>
         </div>
       </div>
@@ -140,11 +157,47 @@
       <div id="collapseWCCI" class="accordion-collapse collapse" data-bs-parent="#publicationsAccordion">
         <div class="accordion-body">
           <strong>Authors:</strong> Bilal Faye, Hanane Azzag, Mustapha Lebbah, Fangchen Feng<br>
-          <strong>Abstract:</strong> Unsupervised method improving normalization in deep networks.<br>
+          <strong>Abstract:</strong> Deep neural networks have become a staple in solving intricate problems, proving their mettle in a wide array of applications. However, their training process is often hampered by shifting activation distributions during backpropagation, resulting in unstable gradients. Batch Normalization (BN) addresses this issue by normalizing activations, which allows for the use of higher learning rates. Despite its benefits, BN is not without drawbacks, including its dependence on mini-batch size and the presumption of a uniform distribution of samples. To overcome this, several alternatives have been proposed, such as Layer Normalization, Group Normalization, and Mixture Normalization. These methods may still struggle to adapt to the dynamic distributions of neuron activations during the learning process. To bridge this gap, we introduce Unsupervised Adaptive Normalization (UAN), an innovative algorithm that seamlessly integrates clustering for normalization with deep neural network learning in a singular process. UAN executes clustering using the Gaussian mixture model, determining parameters for each identified cluster, by normalizing neuron activations. These parameters are concurrently updated as weights in the deep neural network, aligning with the specific requirements of the target task during backpropagation. This unified approach of clustering and normalization, underpinned by neuron activation normalization, fosters an adaptive data representation that is specifically tailored to the target task. This adaptive feature of UAN enhances gradient stability, resulting in faster learning and augmented neural network performance. UAN outperforms the classical methods by adapting to the target task and is effective in classification, and domain adaptation. We release our code at github repository<br>
           <a href="https://ieeexplore.ieee.org/abstract/document/10650127" target="_blank">Read the paper</a>
         </div>
       </div>
     </div>
+
+    
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingWMT21">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWMT21">
+          The SPECTRANS System – WMT21 (EMNLP)
+        </button>
+      </h2>
+      <div id="collapseWMT21" class="accordion-collapse collapse" data-bs-parent="#publicationsAccordion">
+        <div class="accordion-body">
+          <strong>Authors:</strong> Nicolas Ballier, Dahn Cho, Bilal Faye, et al.<br>
+          <strong>Abstract:</strong> This paper discusses the WMT 2021 terminology shared task from a "meta" perspective. We present the results of our experiments using the terminology dataset and the OpenNMT (Klein et al., 2017) and JoeyNMT (Kreutzer et al., 2019) toolkits for the language direction English to French. Our experiment 1 compares the predictions of the two toolkits. Experiment 2 uses OpenNMT to fine-tune the model. We report our results for the task with the evaluation script but mostly discuss the linguistic properties of the terminology dataset provided for the task. We provide evidence of the importance of text genres across scores, having replicated the evaluation scripts. <br>
+          <a href="https://hal.science/hal-03574680" target="_blank">Read the paper</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Journals -->
+    <h4 class="mt-5">Journals</h4>
+      <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOneEncoder">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneEncoder">
+                OneEncoder: Progressive Modality Alignment – NCA journal 2025
+              </button>
+            </h2>
+            <div id="collapseOneEncoder" class="accordion-collapse collapse" data-bs-parent="#publicationsAccordion">
+              <div class="accordion-body">
+                <strong>Authors:</strong> Bilal Faye, Hanane Azzag, Mustapha Lebbah, Djamel Bouchaffra<br>
+                <strong>Abstract:</strong>Cross-modal alignment Learning integrates information from different modalities like text, image, audio and video to create unified models. This approach develops shared representations and learns correlations between modalities, enabling applications such as visual question answering and audiovisual content analysis.
+Current techniques rely on large modality-specific encoders, necessitating fine-tuning or training from scratch on vast aligned datasets (e.g., text-image, text-audio, image-audio). This approach has several limitations: (i) it is highly costly, as it requires training large encoders on vast datasets, (ii) it is difficult to achieve, since obtaining large, well-aligned paired datasets is difficult, and (iii) it is time-consuming, due to the fact that introducing new modalities necessitates retraining the entire framework to accommodate them.
+To address these issues, we propose OneEncoder, a lightweight framework that progressively represents and aligns four modalities (image, text, audio, video). Initially, we train a lightweight Universal Projection (UP) module to align image and text modalities. Then, we freeze the pretrained UP and progressively align future modalities to those already aligned. OneEncoder operates efficiently and cost-effectively, even in scenarios where vast aligned datasets are unavailable, due to its lightweight design. Trained on small paired datasets, it shows strong performance in tasks like classification, querying, and visual question answering, surpassing methods that rely on large datasets and specialized encoders. 
+<br>
+                <a href="https://arxiv.org/abs/2409.11059" target="_blank">Read the paper</a>
+              </div>
+            </div>
+          </div>
 
     <div class="accordion-item">
       <h2 class="accordion-header" id="headingDKE">
@@ -155,27 +208,14 @@
       <div id="collapseDKE" class="accordion-collapse collapse" data-bs-parent="#publicationsAccordion">
         <div class="accordion-body">
           <strong>Authors:</strong> Bilal Faye, Hanane Azzag, Mustapha Lebbah, Fangchen Feng<br>
-          <strong>Abstract:</strong> A new normalization technique for improving performance and stability of neural networks.<br>
+          <strong>Abstract:</strong> Deep neural networks face challenges with distribution shifts across layers, affecting model convergence and performance. While Batch Normalization (BN) addresses these issues, its reliance on a single Gaussian distribution assumption limits adaptability. To overcome this, alternatives like Layer Normalization, Group Normalization, and Mixture Normalization emerged, yet struggle with dynamic activation distributions. We propose ”Context Normalization” (CN), introducing contexts constructed from domain knowledge. CN normalizes data within the same context, enabling local representation. During backpropagation, CN learns normalized parameters and model weights for each context, ensuring efficient convergence and superior performance compared to BN and MN. This approach emphasizes context utilization, offering a fresh perspective on activation normalization in neural networks.<br>
           <a href="https://www.sciencedirect.com/science/article/pii/S0169023X24000958?dgcid=author" target="_blank">Read the paper</a>
         </div>
       </div>
     </div>
 
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingWMT21">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWMT21">
-          The SPECTRANS System – WMT21 (EMNLP)
-        </button>
-      </h2>
-      <div id="collapseWMT21" class="accordion-collapse collapse" data-bs-parent="#publicationsAccordion">
-        <div class="accordion-body">
-          <strong>Authors:</strong> Nicolas Ballier, Dahn Cho, Bilal Faye, et al.<br>
-          <strong>Abstract:</strong> System description paper for terminology translation at WMT21.<br>
-          <a href="https://hal.science/hal-03574680" target="_blank">Read the paper</a>
-        </div>
-      </div>
-    </div>
 
+    
     <!-- National Conferences -->
     <h4 class="mt-5">National Conferences</h4>
 
@@ -188,7 +228,7 @@
       <div id="collapseRNTI" class="accordion-collapse collapse" data-bs-parent="#publicationsAccordion">
         <div class="accordion-body">
           <strong>Authors:</strong> Bilal Faye, Hanane Azzag, Mustapha Lebbah, Fangchen Feng<br>
-          <strong>Abstract:</strong> A French-language version of the context normalization method for stability in neural networks.<br>
+          <strong>Abstract:</strong> L'apprentissage des réseaux de neurones est confronté à des défis majeurs liés au changement de distribution en couches, perturbant ainsi la convergence et les performances des modèles. La Normalisation par lot (BN) a révolutionné ce domaine, mais repose sur l'hypothèse simplifiée d'une seule composante gaussienne par lot. Pour remédier à cela, la Normalisation par Mélange (MN) a adopté une approche basée sur le modèle de mélange gaussien (GMM), mais avec des coûts computationnels importants liés à l'algorithme Espérance-Maximisation (EM) pour déterminer des composantes. Notre solution, la Normalisation Contextuelle (CN), regroupe des observations similaires en "contextes" pour une représentation locale, sans nécessiter d'algorithme de construction de ces contextes. Les paramètres de normalisation sont appris de manière similaire aux poids du modèle, assurant rapidité, convergence et performances supérieures par rapport à BN et MN.<br>
           <a href="https://editions-rnti.fr/?inprocid=1002907" target="_blank">Read the paper</a>
         </div>
       </div>
@@ -206,7 +246,7 @@
       <div id="collapseICDMW" class="accordion-collapse collapse" data-bs-parent="#publicationsAccordion">
         <div class="accordion-body">
           <strong>Authors:</strong> Bilal Faye, Hanane Azzag, Mustapha Lebbah, Mohamed-Djallel Dilmi, Djamel Bouchaffra<br>
-          <strong>Abstract:</strong> Introduction of a context-based normalization layer with real-world applications.<br>
+          <strong>Abstract:</strong> Deep neural networks (DNNs) have gained prominence in many areas such as computer vision (CV), natural language processing (NLP), robotics, and bioinformatics. While their deep and complex structure enables powerful representation and hierarchical learning, it poses serious challenges (e.g., internal covariate shift, vanishing/exploding gradients, overfitting, and computational complexity), during their training phase. Neuron activity normalization is an effective strategy that lives up to these challenges. This procedure consists in promoting stability, creating a balanced learning, improving performance generalization and gradient flow efficiency. Traditional normalization methods often overlook inherent dataset relationships. For example, batch normalization (BN) estimates mean and standard deviation from randomly constructed mini-batches (composed of unrelated samples), leading to performance dependence solely on the size of mini-batches, without accounting for data correlation within these batches. Conventional techniques such as Layer Normalization, Instance Normalization, and Group Normalization estimate normalization parameters per instance, addressing mini-batch size issues. Mixture Normalization (MN) utilizes a two-step process: (i) training a Gaussian mixture model (GMM) to determine components parameters, and (ii) normalizing activations accordingly. MN outperforms BN but incurs computational overhead due to GMM usage. To overcome these limitations, we propose a novel methodology that we named "Context Normalization" (CN). Our approach assumes that the data distribution can be represented as a mixture of Gaussian components. However, unlike MN that assumes a-priori that data are partitioned with respect to a set of Gaussian distributions, CN introduces the notion of concept that accounts for data relationship via a neural network classification scheme. Samples that are gathered within a cluster define a context. The estimation of the Gaussian components parameters is conducted through a supervised neural network-based concept classification. CN is more precise when clusters are thick and not sparse. Extensive comparative experiments conducted on various datasets demonstrates the superiority of CN over BN and MN in terms of convergence speed and performance generalization. In fact, CN outperforms BN and MN with a convergence speed margin of 5% and a performance margin of 10%. These results reveal the importance and the need of capturing inherent data context to learn the Gaussian component parameters. Our proposed approach harnesses data relationships, and therefore enhances deep learning models in various applications.<br>
           <a href="https://doi.ieeecomputersociety.org/10.1109/ICDMW60847.2023.00086" target="_blank">Read the paper</a>
         </div>
       </div>
@@ -216,15 +256,30 @@
     <h4 class="mt-5">Preprints</h4>
 
     <div class="accordion-item">
+      <h2 class="accordion-header" id="headingRPO">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePriorNorm">
+          Value-Free Policy Optimization via Reward Partitioning
+        </button>
+      </h2>
+      <div id="collapsePriorNorm" class="accordion-collapse collapse" data-bs-parent="#publicationsAccordion">
+        <div class="accordion-body">
+          <strong>Authors:</strong> Bilal Faye, Hanane Azzag, Mustapha Lebbah<br>
+          <strong>Abstract:</strong>Single-trajectory reinforcement learning (RL) methods aim to optimize policies from datasets consisting of (prompt, response, reward) triplets, where scalar rewards are directly available. This supervision format is highly practical, as it mirrors real-world human feedback, such as thumbs-up/down signals, and avoids the need for structured preference annotations. In contrast, pairwise preference-based methods like Direct Preference Optimization (DPO) rely on datasets with both preferred and dispreferred responses, which are harder to construct and less natural to collect. Among single-trajectory approaches, Direct Reward Optimization (DRO) has shown strong empirical performance due to its simplicity and stability. However, DRO requires approximating a value function, which introduces several limitations: high off-policy variance, coupling between policy and value learning, and a lack of absolute supervision on the policy itself. We introduce Reward Partitioning Optimization (RPO), a new method that resolves these limitations by removing the need to model the value function. Instead, RPO normalizes observed rewards using a partitioning approach estimated directly from data. This leads to a straightforward supervised learning objective on the policy, with no auxiliary models and no joint optimization. RPO provides direct and stable supervision on the policy, making it robust and easy to implement in practice. We validate RPO on scalar-feedback language modeling tasks using Flan-T5 encoder-decoder models. Our results demonstrate that RPO outperforms existing single-trajectory baselines such as DRO and Kahneman-Tversky Optimization (KTO). These findings confirm that RPO is a simple, effective, and theoretically grounded method for single-trajectory policy optimization. <br>
+          <a href="https://arxiv.org/abs/2506.13702" target="_blank">Read the paper</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
       <h2 class="accordion-header" id="headingOVOD">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOVOD">
-          Low-Cost Open-Vocabulary Object Detection – IJCNN (Submitted)
+          Low-Cost Open-Vocabulary Object Detection
         </button>
       </h2>
       <div id="collapseOVOD" class="accordion-collapse collapse" data-bs-parent="#publicationsAccordion">
         <div class="accordion-body">
           <strong>Authors:</strong> Bilal Faye, Hanane Azzag, Mustapha Lebbah<br>
-          <strong>Abstract:</strong> Lightweight modular architecture for efficient object detection.<br>
+          <strong>Abstract:</strong> Object detection is a fundamental challenge in computer vision, centered on recognizing objects within images, with diverse applications in areas like image analysis, robotics, and autonomous vehicles. Although existing methods have achieved great success, they are often constrained by a fixed vocabulary of objects. To overcome this limitation, approaches like MDETR have redefined object detection by incorporating region-level vision-language pre-training, enabling open-vocabulary object detectors. However, these methods are computationally heavy due to the simultaneous training of large models for both vision and language representations. To address this, we introduce a lightweight framework that significantly reduces the number of parameters while preserving, or even improving, performance. Our solution is applied to MDETR, resulting in the development of Lightweight MDETR (LightMDETR), an optimized version of MDETR designed to enhance computational efficiency without sacrificing accuracy. The core of our approach involves freezing the MDETR backbone and training only the Universal Projection module (UP), which bridges vision and language representations. A learnable modality token parameter allows the UP to seamlessly switch between modalities. Evaluations on tasks like phrase grounding, referring expression comprehension, and segmentation show that LightMDETR not only reduces computational costs but also outperforms several state-of-the-art methods in terms of accuracy.<br>
           <a href="https://arxiv.org/abs/2408.10787" target="_blank">Read the paper</a>
         </div>
       </div>
@@ -233,13 +288,13 @@
     <div class="accordion-item">
       <h2 class="accordion-header" id="headingGameTheory">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGameTheory">
-          Game Theory Meets Statistical Mechanics – IJCAI (Submitted)
+          Game Theory Meets Statistical Mechanics
         </button>
       </h2>
       <div id="collapseGameTheory" class="accordion-collapse collapse" data-bs-parent="#publicationsAccordion">
         <div class="accordion-body">
           <strong>Authors:</strong> Djamel Bouchaffra, Fayçal Ykhlef, Bilal Faye, Hanane Azzag, Mustapha Lebbah<br>
-          <strong>Abstract:</strong> Theoretical framework combining game theory and statistical mechanics in DL.<br>
+          <strong>Abstract:</strong> We present a novel deep graphical representation that seamlessly merges principles of game theory with laws of statistical mechanics. It performs feature extraction, dimensionality reduction, and pattern classification within a single learning framework. Our approach draws an analogy between neurons in a network and players in a game theory model. Furthermore, each neuron viewed as a classical particle (subject to statistical physics' laws) is mapped to a set of actions representing specific activation value, and neural network layers are conceptualized as games in a sequential cooperative game theory setting. The feed-forward process in deep learning is interpreted as a sequential game, where each game comprises a set of players. During training, neurons are iteratively evaluated and filtered based on their contributions to a payoff function, which is quantified using the Shapley value driven by an energy function. Each set of neurons that significantly contributes to the payoff function forms a strong coalition. These neurons are the only ones permitted to propagate the information forward to the next layers. We applied this methodology to the task of facial age estimation and gender classification. Experimental results demonstrate that our approach outperforms both multi-layer perceptron and convolutional neural network models in terms of efficiency and accuracy.<br>
           <a href="https://arxiv.org/abs/2410.12264" target="_blank">Read the paper</a>
         </div>
       </div>
@@ -248,13 +303,13 @@
     <div class="accordion-item">
       <h2 class="accordion-header" id="headingPriorNorm">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePriorNorm">
-          Prior Knowledge-Based Normalization – AI Journal (Submitted)
+          Prior Knowledge-Based Normalization
         </button>
       </h2>
       <div id="collapsePriorNorm" class="accordion-collapse collapse" data-bs-parent="#publicationsAccordion">
         <div class="accordion-body">
           <strong>Authors:</strong> Bilal Faye, Hanane Azzag, Mustapha Lebbah, Djamel Bouchaffra<br>
-          <strong>Abstract:</strong> Enhancing representation learning through prior-based normalization strategies.<br>
+          <strong>Abstract:</strong> Deep learning models face persistent challenges in training, particularly due to internal covariate shift and label shift. While single-mode normalization methods like Batch Normalization partially address these issues, they are constrained by batch size dependencies and limiting distributional assumptions. Multi-mode normalization techniques mitigate these limitations but struggle with computational demands when handling diverse Gaussian distributions. In this paper, we introduce a new approach to multi-mode normalization that leverages prior knowledge to improve neural network representations. Our method organizes data into predefined structures, or "contexts", prior to training and normalizes based on these contexts, with two variants: Context Normalization (CN) and Context Normalization - Extended (CN-X). When contexts are unavailable, we introduce Adaptive Context Normalization (ACN), which dynamically builds contexts in the latent space during training. Across tasks in image classification, domain adaptation, and image generation, our methods demonstrate superior convergence and performance.<br>
           <a href="https://arxiv.org/abs/2403.16798" target="_blank">Read the paper</a>
         </div>
       </div>
