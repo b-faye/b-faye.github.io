@@ -270,6 +270,21 @@ To address these issues, we propose OneEncoder, a lightweight framework that pro
     <!-- Preprinted Articles -->
     <h4 class="mt-5">Preprints</h4>
 
+      <div class="accordion-item">
+      <h2 class="accordion-header" id="headingRPO">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePriorNorm">
+          Prototype-Guided Diffusion: Visual Conditioning without External Memory
+        </button>
+      </h2>
+      <div id="collapsePriorNorm" class="accordion-collapse collapse" data-bs-parent="#publicationsAccordion">
+        <div class="accordion-body">
+          <strong>Authors:</strong> Bilal Faye, Hanane Azzag, Mustapha Lebbah<br>
+          <strong>Abstract:</strong>
+          Diffusion models have emerged as a leading framework for high-quality image generation, offering stable training and strong performance across diverse domains. However, they remain computationally intensive, particularly during the iterative denoising process. Latent-space models like Stable Diffusion alleviate some of this cost by operating in compressed representations, though at the expense of fine-grained detail. More recent approaches such as Retrieval-Augmented Diffusion Models (RDM) address efficiency by conditioning denoising on similar examples retrieved from large external memory banks. While effective, these methods introduce drawbacks: they require costly storage and retrieval infrastructure, depend on static vision-language models like CLIP for similarity, and lack adaptability during training. We propose the Prototype Diffusion Model (PDM), a method that integrates prototype learning directly into the diffusion process for efficient and adaptive visual conditioning - without external memory. Instead of retrieving reference samples, PDM constructs a dynamic set of compact visual prototypes from clean image features using contrastive learning. These prototypes guide the denoising steps by aligning noisy representations with semantically relevant visual patterns, enabling efficient generation with strong semantic grounding. Experiments show that PDM maintains high generation quality while reducing computational and storage overhead, offering a scalable alternative to retrieval-based conditioning in diffusion models.
+          <a href="https://arxiv.org/abs/2508.09922" target="_blank">Read the paper</a>
+        </div>
+      </div>
+    </div>
     <div class="accordion-item">
       <h2 class="accordion-header" id="headingRPO">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePriorNorm">
