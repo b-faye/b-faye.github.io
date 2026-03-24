@@ -74,6 +74,98 @@
     <div class="accordion-item">
       <h2 class="accordion-header" id="headingICICT">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseICICT">
+           Prototype-Guided Diffusion: Efficient Visual Conditioning without External Memory  – WCCI 2026
+        </button>
+      </h2>
+      <div id="collapseICICT" class="accordion-collapse collapse" data-bs-parent="#publicationsAccordion">
+        <div class="accordion-body">
+          <strong>Authors:</strong> Bilal Faye, Hanane Azzag, Mustapha Lebbah<br>
+                    <strong>Abstract:</strong> 
+          Diffusion models achieve state-of-the-art image generation but remain computationally costly due to iterative denoising. 
+          Latent-space models like Stable Diffusion reduce overhead yet lose fine detail, while retrieval-augmented methods improve efficiency 
+          but rely on large memory banks, static similarity models, and rigid infrastructures. We introduce the Prototype Diffusion Model (PDM), 
+          which embeds prototype learning into the diffusion process to provide adaptive, memory-free conditioning. Instead of retrieving references, 
+          PDM learns compact visual prototypes from clean features via contrastive learning, then aligns noisy representations with semantically 
+          relevant patterns during denoising. Experiments demonstrate that PDM sustains high generation quality while lowering computational and 
+          storage costs, offering a scalable alternative to retrieval-based conditioning.
+          <br>
+          <a href="" target="_blank">Read the paper</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingICICT">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseICICT">
+           LaTRO: Language-Token Routing for Scalable and Parameter-Efficient Multilingual ASR  – WCCI 2026
+        </button>
+      </h2>
+      <div id="collapseICICT" class="accordion-collapse collapse" data-bs-parent="#publicationsAccordion">
+        <div class="accordion-body">
+          <strong>Authors:</strong> Ilyes OUKID, Bilal FAYE, Hanane AZZAG, Mustapha Lebbah, Said Yacine BOULAHIA<br>
+                    <strong>Abstract:</strong> 
+               Multilingual automatic speech recognition (ASR) seeks to transcribe speech from multiple languages within a unified framework, 
+          yet existing approaches often suffer from poor scalability and high computational cost. Current state-of-the-art models typically 
+          rely on language-specific adapters or complex architectures, which increase the number of parameters as new languages are added and 
+          remain ineffective for low-resource and linguistically complex languages, particularly African languages.
+              We propose LaTRO (Language-Token Routing Optimizer), a compact multilingual ASR model that addresses these limitations
+          by (i) maintaining a constant number of trainable parameters regardless of the number of languages, (ii) introducing a learnable 
+          language token that guides the model through a shared parameter routing mechanism without language-specific modules, and (iii) 
+          supporting both simultaneous multilingual training and progressive language integration. The proposed approach is designed to 
+          better handle low-resource and under-explored African languages characterized by rich phonological and morphological variability.
+          Experiments conducted on nine African languages show that LaTRO achieves competitive or superior performance compared to 
+          strong state-of-the-art multilingual ASR models, while significantly reducing computational and memory requirements.
+          <br>
+          <a href="" target="_blank">Read the paper</a>
+        </div>
+      </div>
+    </div>
+    
+      <div class="accordion-item">
+      <h2 class="accordion-header" id="headingICICT">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseICICT">
+           ProfileFormer: A Profile-Based Transformer for Context-Aware Tabular Data Generation  – WCCI 2026
+        </button>
+      </h2>
+      <div id="collapseICICT" class="accordion-collapse collapse" data-bs-parent="#publicationsAccordion">
+        <div class="accordion-body">
+          <strong>Authors:</strong> Liza CHETOUANI, Bilal FAYE, Hanane AZZAG, Zaineb Chelly Dagdia, Mustapha Lebbah<br>
+                    <strong>Abstract:</strong> 
+                Tabular data generation is challenging due to complex feature dependencies, limited data availability, and privacy constraints.
+          Most existing approaches rely on Multi-Layer Perceptron (MLP)-based generative models and perform unconditional sampling from the 
+          training distribution, which prevents adaptation to a specific data context or subset at inference time.
+                We propose ProfileFormer, a Transformer-based generative framework that formulates tabular data generation as an in-context 
+          learning problem. To address the mismatch between Transformers and unordered tabular features, our method introduces 
+          (i) learnable profile queries that structure generation as a query-based process, (ii) context-conditioned cross-attention over 
+          reference profiles defined as real data subsets from the same class to capture inter-instance relations, and (iii) a class- and 
+          context-aware noise mechanism to enhance diversity while preserving consistency.
+                Unlike prior methods, ProfileFormer enables context-aware generation at inference, allowing samples to be generated 
+          conditionally on reference subsets or directly from training data. We validate our approach on multiple medical tabular datasets, 
+          a particularly relevant domain due to data scarcity and the need for cohort-specific data synthesis. Results show competitive or 
+          superior performance compared to state-of-the-art baselines, while offering greater flexibility and controllability.
+
+          <br>
+          <a href="" target="_blank">Read the paper</a>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingICICT">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseICICT">
            Energy-Based Dropout with Patch-Level Regularization  – ESANN 2026
         </button>
       </h2>
