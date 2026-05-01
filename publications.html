@@ -70,6 +70,25 @@
 
     <!-- International Conferences -->
     <h4 class="mt-4">International Conferences</h4>
+    
+      <div class="accordion-item">
+      <h2 class="accordion-header" id="headingICICT">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIJCAI26BILAL">
+           Energy-Regularized Spatial Masking: A Novel Approach to Enhancing Robustness and Interpretability in Vision Models  – IJCAI 2026
+        </button>
+      </h2>
+      <div id="collapseIJCAI26BILAL" class="accordion-collapse collapse" data-bs-parent="#publicationsAccordion">
+        <div class="accordion-body">
+          <strong>Authors:</strong> Tom Devynck, Bilal Faye, Djamel Bouchaffra, Nadjib Lazaar, Mustapha Lebbah, Hanane Azzag<br>
+                    <strong>Abstract:</strong> 
+                    Deep convolutional neural networks achieve remarkable performance by exhaustively processing dense spatial feature maps, yet this brute-force strategy introduces significant computational redundancy and encourages reliance on spurious background correlations. As a result, modern vision models remain brittle and difficult to interpret. We propose Energy-Regularized Spatial Masking (ERSM), a novel framework that reformulates feature selection as a differentiable energy minimization problem. By embedding a lightweight Energy-Mask Layer inside standard convolutional backbones, each visual token is assigned a scalar energy composed of two competing forces: an intrinsic Unary importance cost and a Pairwise spatial coherence penalty. Unlike prior pruning methods that enforce rigid sparsity budgets or rely on heuristic importance scores, ERSM allows the network to autonomously discover an optimal information-density equilibrium tailored to each input. We validate ERSM on convolutional architectures and demonstrate that it produces emergent sparsity, improved robustness to structured occlusion, and highly interpretable spatial masks, while preserving classification accuracy. Furthermore, we show that the learned energy ranking significantly outperforms magnitude-based pruning in deletion-based robustness tests, revealing ERSM as an intrinsic denoising mechanism that isolates semantic object regions without pixel-level supervision.
+          <br>
+          <a href="https://arxiv.org/pdf/2604.06893" target="_blank">Read the paper</a>
+        </div>
+      </div>
+    </div>
+
+    
 
       <div class="accordion-item">
       <h2 class="accordion-header" id="headingICICT">
@@ -193,7 +212,7 @@
       </h2>
       <div id="collapseESANN26" class="accordion-collapse collapse" data-bs-parent="#publicationsAccordion">
         <div class="accordion-body">
-          <strong>Authors:</strong> Tom Devynck, Bilal Faye, Djamel Bouchaffra, Mustapha Lebbah, Hanane Azzag<br>
+          <strong>Authors:</strong> Tom Devynck, Bilal Faye, Djamel Bouchaffra, Nadjib Lazaar, Mustapha Lebbah, Hanane Azzag<br>
                     <strong>Abstract:</strong> 
           Dropout is a widely used stochastic regularization technique, yet it over-
           looks structural dependencies within feature maps. We introduce PB-
